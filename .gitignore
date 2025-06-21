@@ -6,6 +6,7 @@ Thumbs.db
 *.tfstate
 *.tfstate.backup
 .terraform/
+.terraform.lock.hcl
 
 
 # Ansible
