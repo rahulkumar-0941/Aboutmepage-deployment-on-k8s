@@ -1,5 +1,5 @@
 ---
-- name: Install Apache, Git, Java 17, and Jenkins
+- name: Install Apache, Git, Java 17, Jenkins and docker
   hosts: all
   become: true
 
@@ -44,3 +44,14 @@
         systemctl daemon-reexec
         systemctl enable jenkins
         systemctl start jenkins
+
+    - name: Install Docker
+      shell: yum install -y docker
+      ignore_errors: yes
+
+    - name: Start and enable Docker
+      shell: |
+        systemctl daemon-reexec
+        systemctl enable docker
+        systemctl start docker
+
