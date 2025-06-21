@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Aboutmepage-deployment
+  name: aboutmepage-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: Aboutmepage-deployment
+      app: aboutmepage-deployment
   template:
     metadata:
       labels:
-        app: Aboutmepage-deployment
+        app: aboutmepage-deployment
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/path: "/metrics"
         prometheus.io/port: "8080"
     spec:
       containers:
-        - name: Aboutmepage-deployment
+        - name: aboutmepage-deployment
           image: rahul0941/about-me-page
           ports:
             - containerPort: 8080
