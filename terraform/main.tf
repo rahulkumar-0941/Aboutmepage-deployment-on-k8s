@@ -1,9 +1,3 @@
-provider "aws" {
-  region  = "ca-central-1"
-  profile = "terraform"
-}
-
-
 # Security Group
 resource "aws_security_group" "web_sg" {
   name        = "AboutDevOps_sg"
